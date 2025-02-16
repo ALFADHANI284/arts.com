@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Kamu</title>
+    <link rel="stylesheet" href="/css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="/logo/arts logo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="top-button">
+            <a href="/index.html" class="icon-button"><i class="fas fa-arrow-left"></i> </a>
+        </div>
+        <div class="header-container">
+        <div class="left-column">
+        <h1>Keranjang Kamu</h1>
+        </div>
+        <div class="right-column">
+        <h1>Informasi Kontak</h1>
+        </div>
+        </div>
+        <div class="content">
+            <div id="cart"></div>
+            <div class="contact-container">
+                
+                <div class="contact-info">
+                    <input type="text" id="name" placeholder="Nama" required>
+                    <input type="text" id="address" placeholder="Alamat Tujuan" required>
+                    <input type="tel" id="phone" placeholder="Nomor Telepon" required>
+                    <div id="error-message" style="color: red; display:none;"></div> 
+                </div>
+            </div>
+        </div>
+        <div class="total-container">
+            <p id="total">Total: 0</p>
+            <button class="btn" onclick="saveContactInfo()">Lanjut ke Pembayaran</button>
+        </div>
+    </div>
+
+    <script src="/js/cart.js"></script>
+</body>
+</html>

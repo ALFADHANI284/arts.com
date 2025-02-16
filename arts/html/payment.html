@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilih Metode Pembayaran</title>
+    <link rel="stylesheet" href="/css/payment.css">
+    <link rel="shortcut icon" href="/logo/arts logo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>Pilih Metode Pembayaran</h1>
+        <div class="payment-options">
+            <div class="payment-card" onclick="proceedToCOD()">
+                <h2>Bayar dengan COD</h2>
+                <p>Metode bayar yang nyaman, menggunakan uang tunai.</p>
+            </div>
+            <div class="payment-card" onclick="proceedToTransfer()">
+                <h2>Bayar dengan Transfer</h2>
+                <p>Transfer melalui bank untuk transaksi yang aman.</p>
+            </div>
+        </div>
+        <a href="cart.html" class="button">Kembali Ke Keranjang</a>
+    </div>
+    <script>
+        function proceedToCOD() {
+            window.location.href = 'cod.html';
+        }
+
+        function proceedToTransfer() {
+            window.location.href = 'transfer payment.html'; 
+        }
+    </script>
+</body>
+</html>

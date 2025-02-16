@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login </title>          
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="shortcut icon" href="/logo/arts logo.png" type="image/x-icon">
+</head>
+<body>
+    <img src="/logo/logo pas-01.png" class="logo" alt="Logo">
+    <div class="container">
+        <form id="loginForm">
+            <h1 align="center">LOGIN</h1>
+            <label for="nama">Nama:</label>
+            <input type="text" name="Nama" id="nama" required>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+            <label>
+                <input type="checkbox" onclick="hideseek()"> show password
+            </label>
+            <button type="submit">Login</button>
+            <a href="/index.html" class="button">Kembali ke Menu Utama</a>
+        </form>
+        <div id="userInfo" style="display: none;">
+            <h2>User Info</h2>
+            <p>Username: <span id="savedUsername"></span></p>
+            <p>Password: <span id="savedPassword"></span></p>
+            <a href="/index.html" class="button">Kembali ke Menu Utama</a>
+            <button id="logoutButton">Logout</button> 
+        </div>
+    </div>
+    <script src="/js/login.js"></script>
+</body>
+</html>

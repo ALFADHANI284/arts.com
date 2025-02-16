@@ -1,0 +1,134 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+h1 {
+    color: #000000;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#orderDetails {
+    margin-top: 20px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1.5px solid #000000;
+    background-color: #f9f9f9; 
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.order-item:last-child {
+    border-bottom: none;
+}
+
+.order-item span {
+    font-size: 16px;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.return-button, .btn {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px ;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.return-button:hover, .btn:hover {
+    background-color: #711313;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .order-item {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .order-item span {
+        font-size: 14px; 
+    }
+
+    
+    .return-button, .btn {
+        width: 100%; 
+        margin-top: 10px; 
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 24px; 
+    }
+
+    h3 {
+        font-size: 16px; 
+    }
+}
+
+.icon-button {
+    display: inline-block; 
+    padding: 10px 20px; 
+    font-size: 1em; 
+    text-decoration: none; 
+    color: white; 
+    background-color: red; 
+    border-radius: 5px; 
+    transition: background-color 0.3s; 
+}
+
+.icon-button i {
+    margin-right: 5px; 
+}
+
+.icon-button:hover {
+    background-color: #c60000;
+}
+
+
+.header-container {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    margin-bottom: 20px; 
+}
+
+.left-column {
+    flex: 0 0 auto; 
+}
+
+.center-column {
+    flex: 1;
+    text-align: center; 
+}

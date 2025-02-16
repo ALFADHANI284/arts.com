@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTS</title>
+
+    <link rel="shortcut icon" href="/logo/arts logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+   
+
+    <!-- awesome font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrerabout">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- header section start -->
+    <header>
+
+        <!-- <a href="#" class="logo"><i class="fas fa-utensils"></i>resto.</a> -->
+        <img src="/logo/logo pas-01.png" width="3%">
+
+        <nav class="navbar">
+            <a class="active" href="#home">Home</a>
+            <a href="#dishes">Populer</a>
+            <a href="#about">Tentang</a>
+            <a href="#menu">Menu</a>
+            <a href="#review">Ulasan</a>
+           
+        </nav>
+        <p>Selamat Datang <span id="hasil-nama"></span></p>
+        <div class="icons">
+          
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="/html/cart.html" class="fas fa-shopping-cart"></a>
+            <a href="/html/login.html" class="fas fa-user"></a>
+          
+        </div>
+    </header>
+    <!-- header section end -->
+    
+    <!-- search form -->
+
+    <form action="" id="search-form">
+        <input type="search" placeholder="search here..." name="" id="search-box">
+        <label for="search" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close"></i>
+    </form>
+
+    <!-- home section awal -->
+   
+    
+    <section class="home" id="home">
+
+        <div class="swiper-container home-slider">
+
+            <div class="swiper-wrapper wrapper">
+             
+              
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span></span>
+                        <h3 align="left">Promo Bulan Ini</h3>
+                        <a href="#dishes" class="btn">Kunjungi </a>
+                    </div>
+                    <div class="image">
+                        <img src="/promo/promo.png">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span></span>
+                        <h3 align="left">Burger</h3>
+                        <a href="#burger" class="btn">Kunjungi</a>
+                    </div>
+                    <div class="image">
+                        <img src="promo/promo 1.png"
+                            alt="">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span></span>
+                        <h3>Pizza</h3>
+                        <a href="#pizza" class="btn">Kunjungi</a>
+                    </div>
+                    <div class="image">
+                        <img src="promo/promo 2.png"
+                            alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </section>
+
+    <!-- home section akhir -->
+
+    <!-- dishes section mulai -->
+    <section class="dishes" id="dishes">
+
+        <h3 class="sub-heading">Menu kami yang viral</h3>
+
+        <div class="container" id="burger">
+            <div class="box">
+                <a href="javascript:void(0);" class="fas fa-eye" onclick="showImage1()"></a>
+                <img src="/menu/burger.png"
+                    alt="">
+                <h3>Burger</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <span><sup>Rp</sup> 35.000</span>
+                <button class="btn" onclick="addToCart('Burger', 35000) ">+ keranjang</button>
+            </div>
+            <div id="modal" class="modal" style="display: none;">
+                <span class="close" onclick="closeImage()">&times;</span>
+                <img id="modal-img" class="modal-content" alt="Gambar Burger">
+            </div>
+            
+            
+
+            <div class="box" id="pizza">
+                <a href="javascript:void(0);" class="fas fa-eye" onclick="showImage2()"></a>
+                <img src="/menu/pizza.png"
+                    alt="">
+                <h3>Pizza</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <span><sup>Rp</sup> 45.000</span>
+                <button class="btn" onclick="addToCart('Pizza', 45000) ">+ keranjang</button>
+            </div>
+            <div id="modal" class="modal" style="display: none;">
+                <span class="close" onclick="closeImage()">&times;</span>
+                <img id="modal-img" class="modal-content" alt="Gambar Pizza">
+            </div>
+            
+
+            <div class="box">
+                <a href="javascript:void(0);" class="fas fa-eye" onclick="showImage3()"></a>
+                <img src="/menu/nugget.png"
+                    alt="">
+                <h3>Fried Chicken Nugget</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <span><sup>Rp</sup> 30.000</span>
+                <button class="btn" onclick="addToCart('Fried Chicken Nugget', 30000) ">+ keranjang</button>
+            </div>
+            <div id="modal" class="modal" style="display: none;">
+                <span class="close" onclick="closeImage()">&times;</span>
+                <img id="modal-img" class="modal-content" alt="Gambar Nugget">
+            </div>
+            
+
+
+            <div class="box">
+                <a href="javascript:void(0);" class="fas fa-eye" onclick="showImage4()"></a>
+                <img src="/menu/kentang goreng.png"
+                    alt="">
+                <h3>kentang goreng</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <span><sup>Rp</sup> 19.500</span>
+                <button class="btn" onclick="addToCart('kentang goreng', 19500) ">+ keranjang</button>
+            </div>
+            <div id="modal" class="modal" style="display: none;">
+                <span class="close" onclick="closeImage()">&times;</span>
+                <img id="modal-img" class="modal-content" alt="Gambar Kemtang Goreng">
+            </div>
+            
+
+            <div class="box">
+                <a href="javascript:void(0);" class="fas fa-eye" onclick="showImage5()"></a>
+                <img src="/menu/taco.png" alt="">
+                <h3>Taco</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <span><sup>Rp</sup> 25.000</span>
+                <button class="btn" onclick="addToCart('Taco', 25000) ">+ keranjang</button>
+            </div>
+            <div id="modal" class="modal" style="display: none;">
+                <span class="close" onclick="closeImage()">&times;</span>
+                <img id="modal-img" class="modal-content" alt="Gambar taco">
+            </div>
+            
+
+            <div class="box">
+                <a href="javascript:void(0);" class="fas fa-eye" onclick="showImage6()"></a>
+                <img src="/menu/sandwich.png"alt="">
+                <h3>Sandwich</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <span><sup>Rp</sup> 27.000</span>
+                <button class="btn" onclick="addToCart('Sandwich', 27000) ">+ keranjang</button>
+            </div>
+            <div id="modal" class="modal" style="display: none;">
+                <span class="close" onclick="closeImage()">&times;</span>
+                <img id="modal-img" class="modal-content" alt="Gambar sandwich">
+            </div>
+            
+        </div>
+
+    </section>
+    <!-- dishes section akhir -->
+
+    <!-- about section awal -->
+
+    <section class="about" id="about">
+
+        <h3 class="sub-heading"> Tentang </h3>
+        <div class="row">
+
+            <div class="image">
+                <img src="/logo/logo pas-01.png"
+                    alt="">
+            </div>
+
+            <div class="content">
+                <h3>ARTS </h3>
+                <p>ARTS Adalah gabungan dari inisial inisial dari kelompok kami yaitu alfa,  rizki, tanisha, dan saladin kami mengambil inisial dari semua nama tersebut untuk menjadikan nama sebuah web restaurant ini. </p>
+                <p>Di dalam web ini terdapat beberapa menu dari fast food, dan juga ada promo promo menarik yang menarik </p>
+                <div class="icons-container">
+                    <div class="icons">
+                        <i class="fas fa-shipping-fast"></i>
+                        <span>Pengiriman Gratis</span>
+                    </div>
+                    <div class="icons">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span>Pembayaran Mudah</span>
+                    </div>
+                    <div class="icons">
+                        <i class="fas fa-headset"></i>
+                        <span>24/7 Pelayanan</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- about section akhir -->
+
+    <!-- menu section awal -->
+
+    <section class="menu" id="menu">
+
+        <h3 class="sub-heading">Menu Kami</h3>
+        <!-- <h1 class="heading"> today's speciality </h1> -->
+
+        <div class="box-container">
+
+            <div class="box">
+               
+                <div class="image">
+                    <img src="/menu/takoyaki.png"
+                        alt="">
+                        
+                    </div>
+                <div class="content">
+                    <a href="javascript:void(0);" class="fas fa-eye" onclick="showImage7()"></a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Takoyaki</h3>
+                    <p> Nikmati Takoyaki, bola-bola gurita lezat dari Jepang! Renyah di luar, lembut di dalam, disajikan dengan saus khas, mayones Jepang, dan taburan aonori. Camilan sempurna yang menggugah selera! Ayo, coba sekarang!</p>
+                        <button class="btn" onclick="addToCart('Takoyaki', 14000) ">+ keranjang</button>
+                        <span class="pice"><sup>Rp</sup> 14.000</span>
+                </div>
+            </div>
+            <div id="modal" class="modal" style="display: none;">
+                <span class="close" onclick="closeImage()">&times;</span>
+                <img id="modal-img" class="modal-content" alt="Gambar Ayam Goreng">
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="/menu/hot dog.png"
+                        alt="">
+                        
+                </div>
+                <div class="content">
+                    <a href="javascript:void(0);" class="fas fa-eye" onclick="showImage8()"></a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Hot Dog</h3>
+                    <p>Nikmati hot dog klasik yang menggoda selera! Sosis flavorful dibungkus roti lembut, ditambahkan dengan berbagai topping seperti mustard, saus tomat, dan acar. Camilan praktis dan lezat yang cocok untuk setiap kesempatan. Segera cicipi kelezatannya!</p>
+                        <button class="btn" onclick="addToCart('Hot Dog', 25000) ">+ keranjang</button>
+                        <span class="pice"><sup>Rp</sup> 25.000</span>
+                </div>
+            </div>
+            <div id="modal" class="modal" style="display: none;">
+                <span class="close" onclick="closeImage()">&times;</span>
+                <img id="modal-img" class="modal-content" alt="Gambar Hot dog">
+            </div>
+            
+
+            <div class="box">
+               
+                <div class="image">
+                    <img src="/menu/spaghetti.png"
+                        alt="">
+                       
+                </div>
+                <div class="content">
+                    <a href="javascript:void(0);" class="fas fa-eye" onclick="showImage9()"></a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Spaghetti</h3>
+                    <p>kelezatan Spaghetti klasik! Pasta panjang yang dimasak al dente, disiram dengan saus tomat segar, bumbu aromatik, dan taburan keju parmesan. Cocok untuk santapan keluarga atau acara spesial, spaghetti ini pasti memuaskan selera Anda. Ayo, nikmati setiap gigitannya!</p>
+                        <button class="btn" onclick="addToCart('Spaghetti', 25000) ">+ keranjang</button>
+                    <span class="pice"><sup>Rp</sup> 25.000</span>
+                </div>
+            </div>
+            <div id="modal" class="modal" style="display: none;">
+                <span class="close" onclick="closeImage()">&times;</span>
+                <img id="modal-img" class="modal-content" alt="Gambar Spaghetti">
+            </div>
+            
+
+            <div class="box">
+                <div class="image">
+                    <img src="/menu/donat.png"
+                        alt="">
+                </div>
+                <div class="content">
+                    <a href="javascript:void(0);" class="fas fa-eye" onclick="showImage10()"></a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Donat</h3>
+                    <p>Rasakan kenikmatan donat lembut yang menggoda! Dengan berbagai pilihan rasa seperti cokelat, vanila, dan stroberi, setiap gigitannya dipenuhi dengan kebahagiaan. Dihiasi dengan taburan gula atau krim, donat ini cocok untuk camilan manis di setiap kesempatan. Ayo, manjakan diri Anda dengan donat lezat ini!</p>
+                        <button class="btn" onclick="addToCart('Donat', 11000) ">+ keranjang</button>
+                        <span class="pice"><sup>Rp</sup> 11.000</span>
+                </div>
+            </div>
+            <div id="modal" class="modal" style="display: none;">
+                <span class="close" onclick="closeImage()">&times;</span>
+                <img id="modal-img" class="modal-content" alt="Gambar Donat">
+            </div>
+           
+
+            <div class="box">
+                
+                <div class="image">
+                    <img src="/menu/salad ayam.png"
+                        alt="">
+                </div>
+                <div class="content">
+                    <a href="javascript:void(0);" class="fas fa-eye" onclick="showImage11()"></a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Salad Ayam</h3>
+                    <p>Nikmati kesegaran Salad Ayam yang sehat dan lezat! Daging ayam panggang yang juicy, perpaduan sayuran segar seperti selada, tomat, dan timun, dengan dressing pilihan yang menggugah selera. Sempurna sebagai hidangan utama atau camilan ringan. Segera rasakan keseimbangan rasa dan nutrisi dalam setiap suapan!</p>
+                        <button class="btn" onclick="addToCart('Salad Ayam', 27000) ">+ keranjang</button>
+                        <span class="pice"><sup>Rp</sup> 27.000</span>
+                </div>
+            </div>
+            <div id="modal" class="modal" style="display: none;">
+                <span class="close" onclick="closeImage()">&times;</span>
+                <img id="modal-img" class="modal-content" alt="Gambar salad ayam">
+            </div>
+           
+
+            <div class="box">
+                <div class="image">
+                    <img src="/menu/prekedel.png"
+                        alt="">
+                </div>
+                <div class="content">
+                    <a href="javascript:void(0);" class="fas fa-eye" onclick="showImage12()"></a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Prekedel</h3>
+                    <p>Nikmati kelezatan prekedel kami, camilan tradisional yang gurih dan renyah. Setiap gigitan akan membawa Anda merasakan cita rasa autentik yang bikin nagih!</p>
+                        <button class="btn" onclick="addToCart('Prekedel', 19000) ">+ keranjang</button>
+                        <span class="pice"><sup>Rp</sup> 19000</span>
+                </div>
+            </div>
+            <div id="modal" class="modal" style="display: none;">
+                <span class="close" onclick="closeImage()">&times;</span>
+                <img id="modal-img" class="modal-content" alt="Gambar prekedel">
+            </div>
+            
+
+            <div class="box">
+                <div class="image">
+                    <img src="/menu/sosis.png"
+                        alt="">
+                </div>
+                <div class="content">
+                    <a href="javascript:void(0);" class="fas fa-eye" onclick="showImage13()"></a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Sosis</h3>
+                    <p>Nikmati sosis  yang menggoda selera! Terbuat dari daging pilihan, sosis ini dibumbui dengan sempurna dan dapat dinikmati dengan berbagai cara—dipanggang, digoreng, atau direbus. Cocok sebagai camilan, hidangan utama, atau tambahan dalam sandwich. Ayo, rasakan kelezatannya!</p>
+                        <button class="btn" onclick="addToCart('Sosis', 18500) ">+ keranjang</button>
+                        <span class="pice"><sup>Rp</sup> 18.500</span>
+                </div>
+            </div>
+            <div id="modal" class="modal" style="display: none;">
+                <span class="close" onclick="closeImage()">&times;</span>
+                <img id="modal-img" class="modal-content" alt="Gambar Sosis">
+            </div>
+            
+
+            <div class="box">
+                <div class="image">
+                    <img src="/menu/ayam goreng.png"
+                        alt="">
+                </div>
+                <div class="content">
+                    <a href="javascript:void(0);" class="fas fa-eye" onclick="showImage14()"></a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Ayam goreng</h3>
+                    <p>Nikmati kelezatan Ayam Goreng yang renyah dan juicy! Dibalut tepung crispy yang sempurna, setiap gigitan menawarkan rasa gurih yang menggoda. Cocok disajikan dengan nasi, sambal, atau saus favorit Anda. Ayo, manjakan diri Anda dengan ayam goreng yang wajib dicoba ini!</p>
+                        <button class="btn" onclick="addToCart('Ayam goreng', 29000) ">+ keranjang</button>
+                        <span class="pice"><sup>Rp</sup> 29.000</span>
+                </div>
+            </div>
+            <div id="modal" class="modal" style="display: none;">
+                <span class="close" onclick="closeImage()">&times;</span>
+                <img id="modal-img" class="modal-content" alt="Gambar Ayam Goreng">
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="/menu/burrito.png"
+                        alt="">
+
+                </div>
+                <div class="content"> 
+                    <a href="javascript:void(0);" class="fas fa-eye" onclick="showImage15()"></a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Burrito</h3>
+                    <p>Rasakan Burrito yang menggugah selera! Terisi nasi, daging pilihan, sayuran segar, dan saus spesial, semua dibungkus dalam tortilla lembut. Camilan yang praktis dan memuaskan, sempurna untuk menemani hari-hari Anda. Ayo, nikmati burrito lezat ini sekarang!</p>
+                        <button class="btn" onclick="addToCart('Burrito', 47000) ">+ keranjang</button>
+                        <span class="pice"><sup>Rp</sup> 47.000</span>
+                </div> 
+                <div id="modal" class="modal" style="display: none;">
+                    <span class="close" onclick="closeImage()">&times;</span>
+                    <img id="modal-img" class="modal-content" alt="Gambar Burrito">
+                </div>
+            
+
+    </section>
+
+    <!-- menu section akhir -->
+
+    <!-- review section awal -->
+
+    <section class="review" id="review">
+
+        <h3 class="sub-heading"> Ulasan Pelanggan</h3>
+        <h1 class="heading"> Apa yang mereka katakan</h1>
+
+        <div class="swiper-container review-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="/ulasan/ulasan 1.jpg"
+                            alt="">
+                        <div class="user-info">
+                            <h3>Lionel Messi</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Makananya enak enak dan harganya cukup terjangkau lokasinya juga strategis </p>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="/ulasan/ulasan 2.jpg">
+                        <div class="user-info">
+                            <h3>Abdeel</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Untuk Pengiriman makananya cepat dan juga tidak ada biaya tambahan </p>
+                </div>
+
+
+
+                 <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="/ulasan/ulasan 3.jpg"
+                            alt="">
+                        <div class="user-info">
+                            <h3>Fhasa</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Bagi yang mencari suasana hangat dan makanan lezat, ARTS  ini adalah pilihan sempurna! Menu yang bervariasi dan rasa yang tiada duanya menjadikan pengalaman makan di sini selalu istimewa</p>
+                </div>
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="/ulasan/ulasan.jpg"
+                            alt="">
+                        <div class="user-info">
+                            <h3>Ojan Ganteng</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Untuk pembayaran di sini mudah, dan juga makananya enak    </p>
+                </div>
+
+            
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="/ulasan/ulasan 4.jpg"
+                            alt="">
+                        <div class="user-info">
+                            <h3>Deass</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Saya baru saja mencoba layanan pesanan online dari restoran ini, dan saya sangat terkesan! Makanan tiba dengan cepat dan tetap dalam kondisi panas. Rasanya tidak kalah dengan pengalaman makan di tempat</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    
+    <!-- footer section awal -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>Lokasi</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.0443300704779!2d109.23773186953663!3d-7.445624769738023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655c2d00d7b7bb%3A0x8ba3ee2f34bd2b50!2sPumas%20IV%20No.44%2C%20Windusara%2C%20Karangklesem%2C%20Kec.%20Purwokerto%20Sel.%2C%20Kabupaten%20Banyumas%2C%20Jawa%20Tengah%2053144!5e0!3m2!1sid!2sid!4v1731900431653!5m2!1sid!2sid" width="270" height="190" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="box bantuan">
+                <h3>Butuh Bantuan?</h3>
+             <div class="contact">
+                <img src="/logo/chat.png" width="15%"><a href="whatsapp://send?text=Hello&phone=+62882006083582">Hubungi kami</a>
+            </div>
+            </div>
+
+            <div class="box">
+                <h3>Ikuti kami</h3>
+                <a href="https://www.instagram.com/dhani_alfa284/">alfa</a>
+                <a href="https://www.instagram.com/rizkyshaajaa/">rizky</a>
+                <a href="https://www.instagram.com/saladin_0ctiano_bonanza/">saladin</a>
+                <a href="https://www.instagram.com/tansnha_/">tanisha</a>
+            </div>
+
+            <div class="box">
+                <h3>Sosial Media Kami</h3>
+                <div class="icons-instagram">
+                <a href="https://www.instagram.com/arts.official4/"><i class="fa-brands fa-instagram"></i>Instagram</a>
+            </div>
+
+            </div>
+
+        </div>
+
+        <div class="credit"> copyright &copy 2024 by <span>ARTS Official</span></div>
+    </section>
+
+    <!-- footer section akhir -->
+
+    <!-- bagian loader -->
+    <div class="loader-container">
+        <img src="/logo/animasi.gif" alt="">
+    </div>
+
+    <script>
+        // Ambil parameter dari URL
+        var params = new URLSearchParams(window.location.search);
+        var nama = localStorage.getItem('username');
+        var password = params.get('password');
+
+        // Cek apakah pengguna sudah login
+        if (nama) {
+            // Tampilkan pesan selamat datang
+            document.getElementById('hasil-nama').textContent = `${nama}`; 
+        } else {
+            // Jika belum login, bisa menampilkan pesan alternatif
+            document.getElementById('hasil-nama').textContent = '';
+        }
+    </script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+  
+</body>
+
+</html>
